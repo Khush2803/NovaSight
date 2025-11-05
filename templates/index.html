@@ -12,9 +12,18 @@
 
 <body>
   <video id="video" width="720px" height="560px" autoplay muted></video>
+  <div id="voice-output">
+    <h3>Enhanced Voice Recognition & Translation</h3>
+    <button id="start-voice-btn">Start Recording (3s)</button>
+    <p id="voice-status">Click button to record audio for 3 seconds</p>
+    <p><strong>Detected Language:</strong> <span id="detected-lang"></span></p>
+    <p><strong>Original:</strong> <span id="original-text"></span></p>
+    <p><strong>Hindi:</strong> <span id="hindi-text"></span></p>
+    <p><strong>English:</strong> <span id="english-text"></span></p>
+  </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename = 'js/face-api.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename = 'js/index.js') }}"></script>
 
